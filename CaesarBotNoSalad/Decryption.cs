@@ -17,11 +17,10 @@ namespace CaesarBotNoSalad
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
             string m = textBox1.Text;
-
             int nomer; // Номер в алфавите
             int d; // Смещение
             string s; //Результат
@@ -43,10 +42,10 @@ namespace CaesarBotNoSalad
                     }
                 }
 
-                if (j != 28) // Если j равно 33, значит символ не из алфавита
+                if (j != 28) // Если j равно 26, значит символ не из алфавита
                 {
                     nomer = j; // Индекс буквы
-                    d = nomer + Enternumber; // Делаем смещение
+                    d = nomer - Enternumber; // Делаем смещение
 
                     // Проверяем, чтобы не вышли за пределы алфавита
                     if (d > 25)
@@ -61,5 +60,13 @@ namespace CaesarBotNoSalad
             s = new string(massage); // Собираем символы обратно в строку.
             textBox2.Text = s; // Записываем результат в файл.
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Perexodnik perexodnik = new Perexodnik();
+            perexodnik.Show();
+            this.Hide();
+        }
     }
-}
+    }
+

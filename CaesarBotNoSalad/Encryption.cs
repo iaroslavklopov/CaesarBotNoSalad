@@ -43,7 +43,7 @@ namespace CaesarBotNoSalad
                     }
                 }
 
-                if (j != 28) // Если j равно 33, значит символ не из алфавита
+                if (j != 28) // Если j равно 26, значит символ не из алфавита
                 {
                     nomer = j; // Индекс буквы
                     d = nomer + Enternumber; // Делаем смещение
@@ -60,6 +60,13 @@ namespace CaesarBotNoSalad
 
             s = new string(massage); // Собираем символы обратно в строку.
             textBox2.Text = s; // Записываем результат в файл.
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Perexodnik perexodnik = new Perexodnik();
+            perexodnik.Show();
+            this.Hide();
         }
     }
 }
